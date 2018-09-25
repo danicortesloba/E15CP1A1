@@ -16,6 +16,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">My Session<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <%if logged?%>
+            <li><%= link_to 'Personal histories', histories_personal_histories_path %></li>
                 <li><a href="<%= session_path(current_user)%>" data-method="DELETE">Log out</a></li>
             <% else %>
                 <li><a href="<%= users_sign_in_path%>">Log in</a></li>

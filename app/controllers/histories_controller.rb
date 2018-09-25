@@ -12,6 +12,9 @@ class HistoriesController < ApplicationController
   def show
   end
 
+  def personal_histories
+   @histories = History.where user_id: helpers.current_user.id
+ end
   # GET /histories/new
   def new
     @history = History.new
