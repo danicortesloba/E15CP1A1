@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="row">
+    <div class="col-md-9">
+      <h3> Empleados: </h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Título</th>
+            <th>Contenido</th>
+            <th colspan="2"></th>
+          </tr>
+        </thead>
+        <tbody>
+        <% @histories.each do |history| %>
+        <tr>
+
+            <td><%= history.title %></td>
+            <td> <%= history.content %></td>
+
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
